@@ -17,7 +17,7 @@ internal static class HttpClientExtensions
             : countryCode;
 
         var response = await client.GetAsync(
-            new Uri($"https://itunes.apple.com/{countryCode}/lookup?bundleId={bundleIdentifier}"),
+            new Uri($"https://itunes.apple.com/{countryCode}/lookup?bundleId={bundleIdentifier}&cache={Guid.NewGuid()}"),
             cancellationToken).ConfigureAwait(false);
         var json = await response.Content.ReadAsStringAsync(
             cancellationToken).ConfigureAwait(false);
