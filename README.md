@@ -17,9 +17,9 @@ and suggest actions to the user based on this.
 builder
     .UseMauiApp<App>()
 +   .UseAppStoreInfo(options =>
-    {
-        options.CountryCode = "gb"; // Optional, default is "us"
-    })
++   {
++       options.CountryCode = "gb"; // Optional, default is "us"
++   })
     .ConfigureFonts(fonts =>
     {
         fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
