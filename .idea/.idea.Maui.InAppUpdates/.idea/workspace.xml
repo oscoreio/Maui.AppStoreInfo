@@ -28,53 +28,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff279b00-276e-4c75-8e8c-aa86605c92ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Maui.InAppUpdates.sln.DotSettings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Maui.AppStores.SampleApp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfoExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfoOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/IAppStoreInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/MauiAppBuilderExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/EmptyAppStoreInfoImplementation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/AppStoreInfoImplementation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/LatestVersion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/LookupResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/LookupResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/SourceGenerationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/dotnet.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dotnet.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr.yml" afterDir="false" />
+    <list default="true" id="ff279b00-276e-4c75-8e8c-aa86605c92ad" name="Changes" comment="fix: Prevent caching.">
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Android/AppStoreInfoImplementation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Windows/AppStoreInfoImplementation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Maui.InAppUpdates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Maui.InAppUpdates/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maui.InAppUpdates.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Maui.InAppUpdates.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/AppShell.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/AppShell.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Main.InAppUpdates.SampleApp.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/MainPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/MainPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/MainPage.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/MauiProgram.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/MauiProgram.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/Android/MainActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Android/MainActivity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/Android/MainApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Android/MainApplication.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/AppDelegate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/AppDelegate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/Tizen/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Tizen/Main.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/Tizen/tizen-manifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Tizen/tizen-manifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/Windows/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Windows/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/Windows/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Windows/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/Windows/app.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Windows/app.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/iOS/AppDelegate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/iOS/AppDelegate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/Platforms/iOS/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/iOS/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/TrimmingHelper/TrimmingHelper.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/TrimmingHelper/TrimmingHelper.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/AndroidInAppUpdatesOptions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Maui.InAppUpdates.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Maui.AppStoreInfo.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/MauiAppBuilderExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/AppUpdateSuccessListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/DefaultUserInterface.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/Handler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/InstallStateUpdatedListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/ResumeSuccessListener.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfoExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfoExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/EmptyAppStoreInfoImplementation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Tizen/AppStoreInfoImplementation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,10 +58,17 @@
     <setting file="file://$PROJECT_DIR$/sample/MauiProgram.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/sample/Platforms/MacCatalyst/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/sample/Platforms/iOS/AppDelegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Android/AppStoreInfoImplementation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Tizen/AppStoreInfoImplementation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Windows/AppStoreInfoImplementation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/AppStoreInfoImplementation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/LatestVersion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/HttpClientExtensions.Lookup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/LookupResponse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/LookupResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/91079976ed0048988771d29ae64e36dd42c710/8a/16403eb6/Thread.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/91079976ed0048988771d29ae64e36dd42c710/be/933968ca/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d2ef6d96d3bf411eb028281c690d074a14aca28/50/f352598f/PackageId.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d2ef6d96d3bf411eb028281c690d074a14aca28/87/a889fdac/PackageVersion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/822988773544cae8f34bdf1c5eff22dbf69d27adb39b48377ecfa8a7d3e87/AppInfo.shared.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1e5aa2cde634fd95fe669fa3ae2a314caa5c253ba3eb6fbc8f429ea89c67d/Launcher.shared.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d6f0e547abafd17c26d916599e244d1f13b8aa733e96f96b11f40f724ccc16/SemanticProperties.cs" root0="SKIP_HIGHLIGHTING" />
@@ -148,7 +116,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Xamarin.Mac.Maui.AppStores.SampleApp">
+  <component name="RunManager" selected="Xamarin.iOS.Maui.AppStoreInfo">
     <configuration name="TrimmingHelper: FolderProfile" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
       <riderPublish publish_profile="FolderProfile.pubxml" pubxml_path="$PROJECT_DIR$/src/helpers/TrimmingHelper/Properties/PublishProfiles/FolderProfile.pubxml" uuid_high="-836365253506414969" uuid_low="-4633344524907002997" />
       <method v="2" />
@@ -279,13 +247,32 @@
       <option name="presentableId" value="Default" />
       <updated>1708341092891</updated>
       <workItem from="1708341094219" duration="756000" />
-      <workItem from="1708373311981" duration="812000" />
+      <workItem from="1708373311981" duration="5815000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Initial release.">
+      <option name="closed" value="true" />
+      <created>1708374313630</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708374313630</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix: Prevent caching.">
+      <option name="closed" value="true" />
+      <created>1708375891343</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708375891343</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="feat: Initial release." />
+    <MESSAGE value="fix: Prevent caching." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Prevent caching." />
   </component>
 </project>

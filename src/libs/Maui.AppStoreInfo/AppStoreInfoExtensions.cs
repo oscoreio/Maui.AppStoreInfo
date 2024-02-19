@@ -16,7 +16,7 @@ public static class AppStoreInfoExtensions
         CancellationToken cancellationToken = default)
     {
         appStoreInfo = appStoreInfo ?? throw new ArgumentNullException(nameof(appStoreInfo));
-        currentVersion ??= Version.Parse(AppInfo.Current.VersionString);
+        currentVersion ??= AppInfo.Current.Version;
         
         var latestVersion = await appStoreInfo.GetLatestVersionAsync(
             cancellationToken).ConfigureAwait(false);

@@ -16,7 +16,10 @@ and suggest actions to the user based on this.
 ```diff
 builder
     .UseMauiApp<App>()
-+   .UseAppStoreInfo()
++   .UseAppStoreInfo(options =>
+    {
+        options.CountryCode = "gb"; // Optional, default is "us"
+    })
     .ConfigureFonts(fonts =>
     {
         fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -30,6 +33,9 @@ if (!await AppStoreInfo.Current.IsUsingLatestVersionAsync())
     await AppStoreInfo.Current.OpenApplicationInStoreAsync();
 }
 ```
+
+# Notes
+- Since Android doesn't provide an official API, there is no support for this other than opening a store page. It is recommended to use [Android In-App Updates](https://github.com/oscoreio/Maui.Android.InAppUpdates) if you need to check for updates.
 
 # Links
 - https://github.com/edsnider/latestversionplugin/

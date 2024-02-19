@@ -14,9 +14,5 @@ public static class AppStoreInfo
     /// Provides the default implementation for static usage of this API.
     /// </summary>
     public static IAppStoreInfo Current =>
-#if __IOS__
         _currentImplementation ??= new AppStoreInfoImplementation();
-#else
-        _currentImplementation ??= new EmptyAppStoreInfoImplementation();
-#endif
 }

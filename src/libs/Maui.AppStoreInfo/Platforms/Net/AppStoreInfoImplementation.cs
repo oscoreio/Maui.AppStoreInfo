@@ -1,9 +1,8 @@
-﻿#if !__IOS__
-// ReSharper disable once CheckNamespace
+﻿// ReSharper disable once CheckNamespace
 namespace Maui.AppStores;
 
 /// <inheritdoc />
-internal sealed class EmptyAppStoreInfoImplementation : IAppStoreInfo
+internal sealed class AppStoreInfoImplementation : IAppStoreInfo
 {
     /// <inheritdoc />
     public Task<Version> GetLatestVersionAsync(CancellationToken cancellationToken = default)
@@ -17,4 +16,3 @@ internal sealed class EmptyAppStoreInfoImplementation : IAppStoreInfo
         return Task.CompletedTask;
     }
 }
-#endif
