@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Main.InAppUpdates.SampleApp;
+namespace Maui.AppStores.SampleApp;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

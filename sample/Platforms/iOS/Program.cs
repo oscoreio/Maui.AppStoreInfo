@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Main.InAppUpdates.SampleApp;
+namespace Maui.AppStores.SampleApp;
 
 public class Program
 {

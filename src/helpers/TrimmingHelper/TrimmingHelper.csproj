@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\libs\Maui.InAppUpdates\Maui.InAppUpdates.csproj" />
+    <ProjectReference Include="..\..\libs\Maui.AppStoreInfo\Maui.AppStoreInfo.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <TrimmerRootAssembly Include="Maui.InAppUpdates" />
+    <TrimmerRootAssembly Include="Maui.AppStoreInfo" />
   </ItemGroup>
 
   <PropertyGroup Label="Publish">

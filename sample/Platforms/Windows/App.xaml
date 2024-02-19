@@ -1,8 +1,6 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="Main.InAppUpdates.SampleApp.WinUI.App"
+    x:Class="Maui.AppStores.SampleApp.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Maui.AppStores.SampleApp.WinUI"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:Main.InAppUpdates.SampleApp.WinUI">
-
-</maui:MauiWinUIApplication>
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />

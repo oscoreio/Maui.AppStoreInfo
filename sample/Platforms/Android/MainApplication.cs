@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Main.InAppUpdates.SampleApp;
+namespace Maui.AppStores.SampleApp;
 
 [Application]
 public class MainApplication : MauiApplication

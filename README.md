@@ -1,26 +1,34 @@
-# Maui.InAppUpdates
+# Maui.AppStoreInfo
 
-[![Nuget package](https://img.shields.io/nuget/vpre/Oscore.Maui.InAppUpdates)](https://www.nuget.org/packages/Oscore.Maui.InAppUpdates/)
-[![CI/CD](https://github.com/oscoreio/Maui.InAppUpdates/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/oscoreio/Maui.InAppUpdates/actions/workflows/dotnet.yml)
-[![License: MIT](https://img.shields.io/github/license/oscoreio/Maui.InAppUpdates)](https://github.com/oscoreio/Maui.InAppUpdates/blob/main/LICENSE)
+[![Nuget package](https://img.shields.io/nuget/vpre/Oscore.Maui.AppStoreInfo)](https://www.nuget.org/packages/Oscore.Maui.AppStoreInfo/)
+[![CI/CD](https://github.com/oscoreio/Maui.AppStoreInfo/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/oscoreio/Maui.AppStoreInfo/actions/workflows/dotnet.yml)
+[![License: MIT](https://img.shields.io/github/license/oscoreio/Maui.AppStoreInfo)](https://github.com/oscoreio/Maui.AppStoreInfo/blob/main/LICENSE)
 
-Allows you to monitor the availability of updates in App stores and suggest actions to the user based on this
+Allows you to check the information in App stores(for example the latest published version)
+and suggest actions to the user based on this.
 
 # Usage
 - Add NuGet package to your project:
 ```xml
-<PackageReference Include="Oscore.Maui.InAppUpdates" Version="1.0.0" />
+<PackageReference Include="Oscore.Maui.AppStoreInfo" Version="1.0.0" />
 ```
 - Add the following to your `MauiProgram.cs` `CreateMauiApp` method:
 ```diff
 builder
     .UseMauiApp<App>()
-+   .UseInAppUpdates()
++   .UseAppStoreInfo()
     .ConfigureFonts(fonts =>
     {
         fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
         fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
     });
+```
+- Use the `AppStoreInfo.Current` class or `IAppStoreInfo` from DI to check the latest version and suggest actions to the user:
+```csharp
+if (!await AppStoreInfo.Current.IsUsingLatestVersionAsync())
+{
+    await AppStoreInfo.Current.OpenApplicationInStoreAsync();
+}
 ```
 
 # Links

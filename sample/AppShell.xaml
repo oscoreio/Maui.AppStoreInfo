@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="Main.InAppUpdates.SampleApp.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Main.InAppUpdates.SampleApp"
     Shell.FlyoutBehavior="Disabled"
-    Title="Main.InAppUpdates.SampleApp">
+    Title="Maui.AppStores.SampleApp"
+    x:Class="Maui.AppStores.SampleApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:local="clr-namespace:Maui.AppStores.SampleApp"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <ShellContent
-        Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage"
+        Title="Home" />
 
 </Shell>

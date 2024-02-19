@@ -29,5 +29,5 @@ jobs:
           ./workload-install.ps1
 
       - name: Build
-        run: dotnet build src/libs/Maui.InAppUpdates
+        run: dotnet build src/libs/Maui.AppStoreInfo
           --configuration Release

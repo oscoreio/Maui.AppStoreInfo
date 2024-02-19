@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{928D4422-0
 		src\libs\Directory.Build.props = src\libs\Directory.Build.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maui.InAppUpdates", "src\libs\Maui.InAppUpdates\Maui.InAppUpdates.csproj", "{8E7AE677-AD62-4FFE-ACBF-0F1A947ACDDB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maui.AppStoreInfo", "src\libs\Maui.AppStoreInfo\Maui.AppStoreInfo.csproj", "{8E7AE677-AD62-4FFE-ACBF-0F1A947ACDDB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{4746EB5B-E37C-40F0-8CA6-7D03185F5370}"
 EndProject
@@ -30,7 +30,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "helpers", "helpers", "{E9A8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrimmingHelper", "src\helpers\TrimmingHelper\TrimmingHelper.csproj", "{F464A23B-B245-4687-BFB3-0DB3FEEAC38B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main.InAppUpdates.SampleApp", "sample\Main.InAppUpdates.SampleApp.csproj", "{4DC876F9-311E-4FDE-89B0-A73BD145B1C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maui.AppStores.SampleApp", "sample\Maui.AppStores.SampleApp.csproj", "{4DC876F9-311E-4FDE-89B0-A73BD145B1C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

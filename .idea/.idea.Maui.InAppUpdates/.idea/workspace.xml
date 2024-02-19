@@ -9,8 +9,17 @@
     <projectFile kind="XamarinAndroid">sample/Main.InAppUpdates.SampleApp.csproj</projectFile>
     <projectFile kind="XamarinIOS">sample/Main.InAppUpdates.SampleApp.csproj</projectFile>
     <projectFile kind="XamarinMacOS">sample/Main.InAppUpdates.SampleApp.csproj</projectFile>
+    <projectFile kind="XamarinAndroid">sample/Maui.AppStoreInfo.SampleApp.csproj</projectFile>
+    <projectFile kind="XamarinIOS">sample/Maui.AppStoreInfo.SampleApp.csproj</projectFile>
+    <projectFile kind="XamarinMacOS">sample/Maui.AppStoreInfo.SampleApp.csproj</projectFile>
+    <projectFile kind="XamarinAndroid">sample/Maui.AppStores.SampleApp.csproj</projectFile>
+    <projectFile kind="XamarinIOS">sample/Maui.AppStores.SampleApp.csproj</projectFile>
+    <projectFile kind="XamarinMacOS">sample/Maui.AppStores.SampleApp.csproj</projectFile>
     <projectFile pubXmlPath="src/helpers/TrimmingHelper/Properties/PublishProfiles/FolderProfile.pubxml">src/helpers/TrimmingHelper/TrimmingHelper.csproj</projectFile>
     <projectFile kind="XamarinAndroid">src/helpers/TrimmingHelperApp/TrimmingHelperApp.csproj</projectFile>
+    <projectFile kind="XamarinAndroid">src/libs/Maui.AppStoreInfo/Maui.AppStoreInfo.csproj</projectFile>
+    <projectFile kind="XamarinIOS">src/libs/Maui.AppStoreInfo/Maui.AppStoreInfo.csproj</projectFile>
+    <projectFile kind="XamarinWatchOS">src/libs/Maui.AppStoreInfo/Maui.AppStoreInfo.csproj</projectFile>
     <projectFile kind="XamarinAndroid">src/libs/Maui.InAppUpdates/Maui.InAppUpdates.csproj</projectFile>
     <projectFile kind="XamarinIOS">src/libs/Maui.InAppUpdates/Maui.InAppUpdates.csproj</projectFile>
     <projectFile kind="XamarinWatchOS">src/libs/Maui.InAppUpdates/Maui.InAppUpdates.csproj</projectFile>
@@ -20,61 +29,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff279b00-276e-4c75-8e8c-aa86605c92ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/dependabot.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/dotnet.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/pr.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maui.InAppUpdates.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/nuget_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/App.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/App.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/AppShell.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/AppShell.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Main.InAppUpdates.SampleApp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/MainPage.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/MainPage.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/MauiProgram.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/Android/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/Android/MainActivity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/Android/MainApplication.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/Android/Resources/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/AppDelegate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/Entitlements.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/Tizen/Main.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/Tizen/tizen-manifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/Windows/App.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/Windows/App.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/Windows/Package.appxmanifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/Windows/app.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/iOS/AppDelegate.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/iOS/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Platforms/iOS/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Resources/AppIcon/appicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Resources/AppIcon/appiconfg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Resources/Fonts/OpenSans-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Resources/Fonts/OpenSans-Semibold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Resources/Images/dotnet_bot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Resources/Raw/AboutAssets.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Resources/Splash/splash.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Resources/Styles/Colors.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample/Resources/Styles/Styles.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Directory.Build.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/TrimmingHelper/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/TrimmingHelper/TrimmingHelper.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Directory.Build.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/AndroidInAppUpdatesOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Maui.InAppUpdates.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/MauiAppBuilderExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/AppUpdateSuccessListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/DefaultUserInterface.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/Handler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/InstallStateUpdatedListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/ResumeSuccessListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Maui.InAppUpdates.sln.DotSettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sample/Maui.AppStores.SampleApp.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfoExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfoOptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/IAppStoreInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/MauiAppBuilderExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/EmptyAppStoreInfoImplementation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/AppStoreInfoImplementation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/LatestVersion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/LookupResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/LookupResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/SourceGenerationContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/dotnet.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/dotnet.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pr.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Maui.InAppUpdates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Maui.InAppUpdates/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maui.InAppUpdates.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Maui.InAppUpdates.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/AppShell.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/AppShell.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/AppShell.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Main.InAppUpdates.SampleApp.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/MainPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/MainPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/MainPage.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/MainPage.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/MauiProgram.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/MauiProgram.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/Android/MainActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Android/MainActivity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/Android/MainApplication.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Android/MainApplication.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/AppDelegate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/AppDelegate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/MacCatalyst/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/Tizen/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Tizen/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/Tizen/tizen-manifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Tizen/tizen-manifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/Windows/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Windows/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/Windows/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Windows/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/Windows/app.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/Windows/app.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/iOS/AppDelegate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/iOS/AppDelegate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/Platforms/iOS/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/sample/Platforms/iOS/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/TrimmingHelper/TrimmingHelper.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/TrimmingHelper/TrimmingHelper.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/AndroidInAppUpdatesOptions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Maui.InAppUpdates.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Maui.AppStoreInfo.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/MauiAppBuilderExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/AppUpdateSuccessListener.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/DefaultUserInterface.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/Handler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/InstallStateUpdatedListener.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/ResumeSuccessListener.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,12 +90,27 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/sample/App.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/sample/AppShell.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/sample/AppShell.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/sample/MainPage.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/sample/MauiProgram.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/sample/Platforms/MacCatalyst/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/sample/Platforms/iOS/AppDelegate.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Platforms/Android/AppUpdateSuccessListener.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/AppStoreInfoImplementation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/Sdk/LatestVersion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/91079976ed0048988771d29ae64e36dd42c710/8a/16403eb6/Thread.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/91079976ed0048988771d29ae64e36dd42c710/be/933968ca/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/822988773544cae8f34bdf1c5eff22dbf69d27adb39b48377ecfa8a7d3e87/AppInfo.shared.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1e5aa2cde634fd95fe669fa3ae2a314caa5c253ba3eb6fbc8f429ea89c67d/Launcher.shared.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d6f0e547abafd17c26d916599e244d1f13b8aa733e96f96b11f40f724ccc16/SemanticProperties.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="InvalidFacetManager">
     <ignored-facets>
       <facet id="Main.InAppUpdates.SampleApp/invalid/Android Facet - Main.InAppUpdates.SampleApp" />
+      <facet id="Maui.AppStoreInfo.SampleApp/invalid/Android Facet - Maui.AppStoreInfo.SampleApp" />
+      <facet id="Maui.AppStoreInfo/invalid/Android Facet - Maui.AppStoreInfo" />
+      <facet id="Maui.AppStores.SampleApp/invalid/Android Facet - Maui.AppStores.SampleApp" />
       <facet id="Maui.InAppUpdates/invalid/Android Facet - Maui.InAppUpdates" />
       <facet id="TrimmingHelperApp/invalid/Android Facet - TrimmingHelperApp" />
     </ignored-facets>
@@ -104,26 +119,69 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2caE3tlY6MMiMAdmDUkE1sTutEq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "Xamarin.Mac.Maui.AppStoreInfo.SampleApp.executor": "Debug",
+    "Xamarin.Mac.Maui.AppStores.SampleApp.executor": "Debug",
     "git-widget-placeholder": "main"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/havendv/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/Users/havendv/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/Users/havendv/.local/share/Symbols/src"
+    ]
   }
 }]]></component>
-  <component name="RunManager" selected="Xamarin.Android.TrimmingHelperApp">
+  <component name="RunManager" selected="Xamarin.Mac.Maui.AppStores.SampleApp">
     <configuration name="TrimmingHelper: FolderProfile" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
       <riderPublish publish_profile="FolderProfile.pubxml" pubxml_path="$PROJECT_DIR$/src/helpers/TrimmingHelper/Properties/PublishProfiles/FolderProfile.pubxml" uuid_high="-836365253506414969" uuid_low="-4633344524907002997" />
       <method v="2" />
     </configuration>
     <configuration name="Main.InAppUpdates.SampleApp" type="XamarinAndroidProject" factoryName="Xamarin.Android">
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Main.InAppUpdates.SampleApp.csproj" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="DEPLOY_BEHAVIOUR_NAME" value="Default" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Maui.AppStoreInfo" type="XamarinAndroidProject" factoryName="Xamarin.Android">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Maui.AppStoreInfo.csproj" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="DEPLOY_BEHAVIOUR_NAME" value="Default" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Maui.AppStoreInfo.SampleApp" type="XamarinAndroidProject" factoryName="Xamarin.Android">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Maui.AppStoreInfo.SampleApp.csproj" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="DEPLOY_BEHAVIOUR_NAME" value="Default" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Maui.AppStores.SampleApp" type="XamarinAndroidProject" factoryName="Xamarin.Android">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Maui.AppStores.SampleApp.csproj" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="DEPLOY_BEHAVIOUR_NAME" value="Default" />
@@ -150,21 +208,60 @@
       </method>
     </configuration>
     <configuration name="Main.InAppUpdates.SampleApp" type="XamarinIOSProject" factoryName="Xamarin.iOS">
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Main.InAppUpdates.SampleApp.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Maui.AppStoreInfo.SampleApp.csproj" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="IS_PASS_PARENT_ENVS" value="false" />
+      <option name="EXTRA_MLAUNCH_PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Maui.AppStoreInfo" type="XamarinIOSProject" factoryName="Xamarin.iOS">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Maui.AppStoreInfo.csproj" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="IS_PASS_PARENT_ENVS" value="false" />
+      <option name="EXTRA_MLAUNCH_PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Maui.AppStoreInfo.SampleApp" type="XamarinIOSProject" factoryName="Xamarin.iOS">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Maui.AppStoreInfo.SampleApp.csproj" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="IS_PASS_PARENT_ENVS" value="false" />
+      <option name="EXTRA_MLAUNCH_PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Maui.AppStores.SampleApp" type="XamarinIOSProject" factoryName="Xamarin.iOS">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Maui.AppStores.SampleApp.csproj" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="IS_PASS_PARENT_ENVS" value="false" />
       <option name="EXTRA_MLAUNCH_PARAMETERS" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Maui.InAppUpdates" type="XamarinIOSProject" factoryName="Xamarin.iOS">
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/libs/Maui.InAppUpdates/Maui.InAppUpdates.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Maui.AppStoreInfo.csproj" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="IS_PASS_PARENT_ENVS" value="false" />
       <option name="EXTRA_MLAUNCH_PARAMETERS" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Main.InAppUpdates.SampleApp" type="XamarinMacProject" factoryName="Xamarin.Mac">
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Main.InAppUpdates.SampleApp.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Maui.AppStoreInfo.SampleApp.csproj" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS_MAC" value="1" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Maui.AppStoreInfo.SampleApp" type="XamarinMacProject" factoryName="Xamarin.Mac">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Maui.AppStoreInfo.SampleApp.csproj" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS_MAC" value="1" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Maui.AppStores.SampleApp" type="XamarinMacProject" factoryName="Xamarin.Mac">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/sample/Maui.AppStores.SampleApp.csproj" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="PASS_PARENT_ENVS_MAC" value="1" />
@@ -182,11 +279,13 @@
       <option name="presentableId" value="Default" />
       <updated>1708341092891</updated>
       <workItem from="1708341094219" duration="756000" />
+      <workItem from="1708373311981" duration="812000" />
     </task>
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

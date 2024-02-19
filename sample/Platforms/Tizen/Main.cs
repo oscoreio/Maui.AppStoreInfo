@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace Main.InAppUpdates.SampleApp;
+namespace Maui.AppStores.SampleApp;
 
 class Program : MauiApplication
 {

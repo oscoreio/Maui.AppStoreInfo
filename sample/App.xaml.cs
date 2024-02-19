@@ -1,4 +1,4 @@
-﻿namespace Main.InAppUpdates.SampleApp;
+﻿namespace Maui.AppStores.SampleApp;
 
 public partial class App : Application
 {
