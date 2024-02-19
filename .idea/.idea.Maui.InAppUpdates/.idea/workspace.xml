@@ -28,15 +28,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff279b00-276e-4c75-8e8c-aa86605c92ad" name="Changes" comment="fix: Prevent caching.">
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Android/AppStoreInfoImplementation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Windows/AppStoreInfoImplementation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Maui.InAppUpdates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Maui.InAppUpdates/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfoExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/AppStoreInfoExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/EmptyAppStoreInfoImplementation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Tizen/AppStoreInfoImplementation.cs" afterDir="false" />
-    </list>
+    <list default="true" id="ff279b00-276e-4c75-8e8c-aa86605c92ad" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/sample/Platforms/MacCatalyst/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/sample/Platforms/iOS/AppDelegate.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Android/AppStoreInfoImplementation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Net/AppStoreInfoImplementation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Tizen/AppStoreInfoImplementation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/Windows/AppStoreInfoImplementation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/libs/Maui.AppStoreInfo/Platforms/iOS/AppStoreInfoImplementation.cs" root0="SKIP_HIGHLIGHTING" />
@@ -247,7 +240,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708341092891</updated>
       <workItem from="1708341094219" duration="756000" />
-      <workItem from="1708373311981" duration="5815000" />
+      <workItem from="1708373311981" duration="6177000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Initial release.">
       <option name="closed" value="true" />
@@ -265,7 +258,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708375891343</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: Released stable version.">
+      <option name="closed" value="true" />
+      <created>1708383213940</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708383213940</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Released stable version.">
+      <option name="closed" value="true" />
+      <created>1708383334288</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708383334288</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -273,6 +282,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat: Initial release." />
     <MESSAGE value="fix: Prevent caching." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Prevent caching." />
+    <MESSAGE value="feat: Released stable version." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Released stable version." />
   </component>
 </project>
