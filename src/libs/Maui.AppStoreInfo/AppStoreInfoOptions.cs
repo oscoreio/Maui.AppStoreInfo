@@ -21,4 +21,10 @@ public class AppStoreInfoOptions
     /// Uses AppInfo.Current.PackageName as the default value.
     /// </summary>
     public string PackageName { get; set; } = AppInfo.Current.PackageName;
+    
+    /// <summary>
+    /// Gets and sets the current version of the app. <br/>
+    /// Uses AppInfo.Current.Version as the default value.
+    /// </summary>
+    public Version CurrentVersion { get; set; } = AppInfo.Current.Version;
 }
