@@ -6,35 +6,36 @@ namespace Maui.AppStores;
 /// <inheritdoc />
 internal sealed class AppStoreInfoImplementation : IAppStoreInfo
 {
-    private LookupResult? _result;
+    /// <inheritdoc />
+    public AppStoreInformation? CachedInformation { get; set; }
 
     /// <inheritdoc />
-    public async Task<Version> GetLatestVersionAsync(CancellationToken cancellationToken = default)
+    public async Task<AppStoreInformation> GetInformationAsync(
+        CancellationToken cancellationToken = default)
     {
-        _result = await LookupApplicationAsync(cancellationToken).ConfigureAwait(false);
-
-        return Version.Parse(_result.Version);
-    }
-
-    /// <inheritdoc />
-    public async Task OpenApplicationInStoreAsync(CancellationToken cancellationToken = default)
-    {
-        _result ??= await LookupApplicationAsync(cancellationToken).ConfigureAwait(false);
-
-        _ = await Launcher.Default.OpenAsync(new Uri($"{_result.TrackViewUrl}")).ConfigureAwait(false);
-    }
-
-    private static async Task<LookupResult> LookupApplicationAsync(CancellationToken cancellationToken = default)
-    {
-        using var client = new HttpClient();
+        using var client = AppStoreInfo.Options.HttpClientFactory();
         var lookup = await client.LookupAsync(
             bundleIdentifier: AppStoreInfo.Options.PackageName,
             countryCode: AppStoreInfo.Options.CountryCode,
             cancellationToken: cancellationToken).ConfigureAwait(false);
             
-        return lookup.FirstOrDefault() ??
-               throw new InvalidOperationException(
-                   $"No lookup result found for bundle identifier '{AppStoreInfo.Options.PackageName}' " +
-                   $"and country code '{AppStoreInfo.Options.CountryCode}'.");
+        var result =
+            lookup.FirstOrDefault() ??
+            throw new InvalidOperationException(
+               $"No lookup result found for bundle identifier '{AppStoreInfo.Options.PackageName}' " +
+               $"and country code '{AppStoreInfo.Options.CountryCode}'.");
+        
+        return CachedInformation ??= new AppStoreInformation
+        {
+            Title = string.Empty,
+            Description = result.Description,
+            ReleaseNotes = result.ReleaseNotes,
+            ApplicationSizeInBytes = long.TryParse(result.FileSizeBytes, out var size)
+                ? size
+                : 0L,
+            LatestVersion = Version.Parse(result.Version),
+            InternalStoreUri = new Uri(result.TrackViewUrl),
+            ExternalStoreUri = new Uri(result.TrackViewUrl),
+        };
     }
 }

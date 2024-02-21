@@ -9,13 +9,26 @@ namespace Maui.AppStores;
 public sealed class AppStoreInfoImplementation : IAppStoreInfo
 {
     /// <inheritdoc />
-    public Task<Version> GetLatestVersionAsync(CancellationToken cancellationToken = default)
+    public AppStoreInformation? CachedInformation { get; set; }
+
+    /// <inheritdoc />
+    public Task<AppStoreInformation> GetInformationAsync(
+        CancellationToken cancellationToken = default)
     {
-        return Task.FromResult(AppInfo.Current.Version);
+        return Task.FromResult(CachedInformation ??= new AppStoreInformation
+        {
+            Title = string.Empty,
+            Description = string.Empty,
+            ReleaseNotes = string.Empty,
+            ApplicationSizeInBytes = 0L,
+            LatestVersion = AppInfo.Current.Version,
+            InternalStoreUri = new Uri($"market://details?id={AppStoreInfo.Options.PackageName}"),
+            ExternalStoreUri = new Uri($"https://play.google.com/store/apps/details?id={AppStoreInfo.Options.PackageName}"),
+        });
     }
 
     /// <inheritdoc />
-    public Task OpenApplicationInStoreAsync(CancellationToken cancellationToken = default)
+    Task<bool> IAppStoreInfo.OpenApplicationInStoreAsync(CancellationToken cancellationToken)
     {
         try
         {
@@ -35,6 +48,6 @@ public sealed class AppStoreInfoImplementation : IAppStoreInfo
             Application.Context.StartActivity(intent);
         }
 
-        return Task.CompletedTask;
+        return Task.FromResult(true);
     }
 }

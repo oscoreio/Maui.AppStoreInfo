@@ -5,14 +5,12 @@ namespace Maui.AppStores;
 internal sealed class AppStoreInfoImplementation : IAppStoreInfo
 {
     /// <inheritdoc />
-    public Task<Version> GetLatestVersionAsync(CancellationToken cancellationToken = default)
-    {
-        return Task.FromResult(new Version(0, 0));
-    }
+    public AppStoreInformation? CachedInformation { get; set; }
 
     /// <inheritdoc />
-    public Task OpenApplicationInStoreAsync(CancellationToken cancellationToken = default)
+    public Task<AppStoreInformation> GetInformationAsync(
+        CancellationToken cancellationToken = default)
     {
-        return Task.CompletedTask;
+        return Task.FromResult(CachedInformation ??= new AppStoreInformation());
     }
 }
