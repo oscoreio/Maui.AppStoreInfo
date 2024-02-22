@@ -43,5 +43,29 @@ public partial class MainPage : ContentPage
 			await DisplayAlert("Error", ex.Message, "OK");
 		}
 	}
+	
+	[RelayCommand]
+	private async Task RequestAppStoreInformation()
+	{
+		try
+		{
+			var information = await AppStoreInfo.Current.GetInformationAsync();
+            
+			await DisplayAlert(
+				"App Store Information",
+				$"Title: {information.Title}\n" +
+				$"Description: {information.Description}\n" +
+				$"Latest Version: {information.LatestVersion}\n" +
+				$"External Store Uri: {information.ExternalStoreUri}\n" +
+				$"Internal Store Uri: {information.InternalStoreUri}\n" +
+				$"Release Notes: {information.ReleaseNotes}\n" +
+				$"Application Size: {information.ApplicationSizeInBytes/1024/1024} MB\n",
+				"OK");
+		}
+		catch (Exception e)
+		{
+			await DisplayAlert("Error", e.Message, "OK");
+		}
+	}
 }
 

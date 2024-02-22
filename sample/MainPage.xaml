@@ -36,6 +36,10 @@
                 Command="{Binding CheckLatestVersionCommand}"
                 HorizontalOptions="Fill"
                 Text="Check Latest Version" />
+            <Button
+                Command="{Binding RequestAppStoreInformationCommand}"
+                HorizontalOptions="Fill"
+                Text="Request App Store Information" />
         </VerticalStackLayout>
     </ScrollView>
 
