@@ -19,6 +19,8 @@ builder
 +   .UseAppStoreInfo(options =>
 +   {
 +       options.CountryCode = "gb"; // Optional, default is "us"
++       options.PackageName = "com.companyname.appname"; // Optional, default is AppInfo.Current.PackageName
++       options.CurrentVersion = new Version(1, 0, 0); // Optional, default is AppInfo.Current.Version
 +   })
     .ConfigureFonts(fonts =>
     {
@@ -32,6 +34,20 @@ if (!await AppStoreInfo.Current.IsUsingLatestVersionAsync())
 {
     await AppStoreInfo.Current.OpenApplicationInStoreAsync();
 }
+
+// This is all based on the information provided by the following method
+var information = await AppStoreInfo.Current.GetInformationAsync();
+            
+await DisplayAlert(
+    "App Store Information",
+    $"Title: {information.Title}\n" +
+    $"Description: {information.Description}\n" +
+    $"Latest Version: {information.LatestVersion}\n" +
+    $"External Store Uri: {information.ExternalStoreUri}\n" +
+    $"Internal Store Uri: {information.InternalStoreUri}\n" +
+    $"Release Notes: {information.ReleaseNotes}\n" +
+    $"Application Size: {information.ApplicationSizeInBytes/1024/1024} MB\n",
+    "OK");
 ```
 
 # Notes
