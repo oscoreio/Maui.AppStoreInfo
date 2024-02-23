@@ -7,6 +7,10 @@
     xmlns:sampleApp="clr-namespace:Maui.AppStores.SampleApp"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <ContentPage.Resources>
+        <sampleApp:VersionConverter x:Key="VersionConverter" />
+    </ContentPage.Resources>
+
     <ScrollView>
         <VerticalStackLayout
             HorizontalOptions="Center"
@@ -14,9 +18,18 @@
             Spacing="5"
             VerticalOptions="Center">
             <HorizontalStackLayout Spacing="5">
+                <Label Text="Current Version:" />
+                <Entry
+                    IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="False"
+                    Text="{Binding CurrentVersion, Source={x:Static appStores:AppStoreInfo.Options}, Converter={StaticResource VersionConverter}}"
+                    WidthRequest="400" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="5">
                 <Label Text="Country Code:" />
                 <Entry
                     IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="False"
                     Text="{Binding CountryCode, Source={x:Static appStores:AppStoreInfo.Options}}"
                     WidthRequest="400" />
             </HorizontalStackLayout>
@@ -24,6 +37,7 @@
                 <Label Text="Package Name:" />
                 <Entry
                     IsSpellCheckEnabled="False"
+                    IsTextPredictionEnabled="False"
                     Text="{Binding PackageName, Source={x:Static appStores:AppStoreInfo.Options}}"
                     WidthRequest="400" />
             </HorizontalStackLayout>
