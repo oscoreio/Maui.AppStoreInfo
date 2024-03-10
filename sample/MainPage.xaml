@@ -54,6 +54,10 @@
                 Command="{Binding RequestAppStoreInformationCommand}"
                 HorizontalOptions="Fill"
                 Text="Request App Store Information" />
+            <Button
+                Command="{Binding OpenStoreReviewPageCommand}"
+                HorizontalOptions="Fill"
+                Text="Open Store Review Page" />
         </VerticalStackLayout>
     </ScrollView>
 

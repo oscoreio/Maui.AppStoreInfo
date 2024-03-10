@@ -58,6 +58,7 @@ public partial class MainPage : ContentPage
 				$"Latest Version: {information.LatestVersion}\n" +
 				$"External Store Uri: {information.ExternalStoreUri}\n" +
 				$"Internal Store Uri: {information.InternalStoreUri}\n" +
+				$"Internal Review Uri: {information.InternalReviewUri}\n" +
 				$"Release Notes: {information.ReleaseNotes}\n" +
 				$"Application Size: {information.ApplicationSizeInBytes/1024/1024} MB\n",
 				"OK");
@@ -65,6 +66,19 @@ public partial class MainPage : ContentPage
 		catch (Exception e)
 		{
 			await DisplayAlert("Error", e.Message, "OK");
+		}
+	}
+
+	[RelayCommand]
+	private async Task OpenStoreReviewPage()
+	{
+		try
+		{
+			await AppStoreInfo.Current.OpenStoreReviewPage();
+		}
+		catch (Exception ex)
+		{
+			await DisplayAlert("Error", ex.Message, "OK");
 		}
 	}
 }

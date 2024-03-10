@@ -34,7 +34,20 @@ internal sealed class AppStoreInfoImplementation : IAppStoreInfo
                 ? size
                 : 0L,
             LatestVersion = Version.Parse(result.Version),
-            InternalStoreUri = new Uri(result.TrackViewUrl),
+#if __IOS__
+            InternalStoreUri = new Uri($"itms-apps://itunes.apple.com/app/id{AppStoreInfo.Options.PackageName}"),
+#elif __TVOS__
+			InternalStoreUri = new Uri($"com.apple.TVAppStore://itunes.apple.com/app/id{AppStoreInfo.Options.PackageName}"),
+#elif __MACOS__
+			InternalStoreUri = new Uri($"macappstore://itunes.apple.com/app/id{AppStoreInfo.Options.PackageName}?mt=12"),
+#endif
+#if __IOS__
+            InternalReviewUri = new Uri($"itms-apps://itunes.apple.com/app/id{AppStoreInfo.Options.PackageName}?action=write-review"),
+#elif __TVOS__
+			InternalReviewUri = new Uri($"com.apple.TVAppStore://itunes.apple.com/app/id{AppStoreInfo.Options.PackageName}?action=write-review"),
+#elif __MACOS__
+			InternalReviewUri = new Uri($"macappstore://itunes.apple.com/app/id{AppStoreInfo.Options.PackageName}?action=write-review"),
+#endif
             ExternalStoreUri = new Uri(result.TrackViewUrl),
         };
     }

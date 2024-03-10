@@ -24,7 +24,7 @@
 		<ApplicationTitle>Maui.AppStores.SampleApp</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.main.inappupdates.sampleapp</ApplicationId>
+		<ApplicationId>com.companyname.main.appstores.sampleapp</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>

@@ -1,6 +1,6 @@
 ﻿using Android.Content;
+using Android.OS;
 using Application = Android.App.Application;
-using Net = Android.Net;
 
 // ReSharper disable once CheckNamespace
 namespace Maui.AppStores;
@@ -23,6 +23,7 @@ public sealed class AppStoreInfoImplementation : IAppStoreInfo
             ApplicationSizeInBytes = 0L,
             LatestVersion = AppInfo.Current.Version,
             InternalStoreUri = new Uri($"market://details?id={AppStoreInfo.Options.PackageName}"),
+            InternalReviewUri = new Uri($"market://details?id={AppStoreInfo.Options.PackageName}"),
             ExternalStoreUri = new Uri($"https://play.google.com/store/apps/details?id={AppStoreInfo.Options.PackageName}"),
         });
     }
@@ -30,24 +31,56 @@ public sealed class AppStoreInfoImplementation : IAppStoreInfo
     /// <inheritdoc />
     Task<bool> IAppStoreInfo.OpenApplicationInStoreAsync(CancellationToken cancellationToken)
     {
+        return OpenApplicationInStoreAsync(cancellationToken);
+    }
+
+    /// <inheritdoc />
+    Task<bool> IAppStoreInfo.OpenStoreReviewPage(CancellationToken cancellationToken)
+    {
+        return OpenApplicationInStoreAsync(cancellationToken);
+    }
+    
+    private static Intent GetRateIntent(string url)
+    {
+        var intent = new Intent(Intent.ActionView, Android.Net.Uri.Parse(url));
+        intent.AddFlags(ActivityFlags.NoHistory);
+        intent.AddFlags(ActivityFlags.MultipleTask);
+        intent.AddFlags((int)Build.VERSION.SdkInt >= 21 
+            ? ActivityFlags.NewDocument
+            : ActivityFlags.ClearWhenTaskReset);
+        intent.SetFlags(ActivityFlags.ClearTop);
+        intent.SetFlags(ActivityFlags.NewTask);
+        
+        return intent;
+    }
+    
+    private static Task<bool> OpenApplicationInStoreAsync(CancellationToken cancellationToken)
+    {
         try
         {
-            var intent = new Intent(
-                Intent.ActionView,
-                Net.Uri.Parse($"market://details?id={AppStoreInfo.Options.PackageName}"));
+            var intent = GetRateIntent($"market://details?id={AppStoreInfo.Options.PackageName}");
             intent.SetPackage("com.android.vending");
-            intent.SetFlags(ActivityFlags.NewTask);
+            
             Application.Context.StartActivity(intent);
+            return Task.FromResult(true);
         }
-        catch (ActivityNotFoundException)
+        catch (Exception ex)
         {
-            var intent = new Intent(
-                Intent.ActionView,
-                Net.Uri.Parse($"https://play.google.com/store/apps/details?id={AppStoreInfo.Options.PackageName}"));
-            intent.SetFlags(ActivityFlags.NewTask);
+            System.Diagnostics.Debug.WriteLine("Unable to launch app store: " + ex.Message);
+        }
+        
+        try
+        {
+            var intent = GetRateIntent($"https://play.google.com/store/apps/details?id={AppStoreInfo.Options.PackageName}");
+            
             Application.Context.StartActivity(intent);
+            return Task.FromResult(true);
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine("Unable to launch app store: " + ex.Message);
         }
 
-        return Task.FromResult(true);
+        return Task.FromResult(false);
     }
 }

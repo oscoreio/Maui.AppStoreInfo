@@ -39,6 +39,16 @@ public interface IAppStoreInfo
     }
     
     /// <summary>
+    /// Opens the store review page.
+    /// </summary>
+    public async Task<bool> OpenStoreReviewPage(CancellationToken cancellationToken = default)
+    {
+        CachedInformation ??= await GetInformationAsync(cancellationToken).ConfigureAwait(false);
+
+        return await Launcher.Default.OpenAsync(CachedInformation.InternalReviewUri).ConfigureAwait(false);
+    }
+    
+    /// <summary>
     /// Checks if the current app is the latest version available in the public store. <br/>
     /// Uses AppStoreInfo.Options.CurrentVersion(with AppInfo.Current.Version as default)
     /// as the current version if none is provided.

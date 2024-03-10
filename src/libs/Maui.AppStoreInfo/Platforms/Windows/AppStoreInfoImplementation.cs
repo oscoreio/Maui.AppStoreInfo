@@ -17,6 +17,7 @@ public sealed class AppStoreInfoImplementation : IAppStoreInfo
         var updates = await context.GetAppAndOptionalStorePackageUpdatesAsync();
         var product = await context.GetStoreProductForCurrentAppAsync();
         var storeId = product.Product.StoreId;
+        var isAppId = Guid.TryParse(storeId, out var appId);
         
         return CachedInformation ??= new AppStoreInformation
         {
@@ -33,10 +34,13 @@ public sealed class AppStoreInfoImplementation : IAppStoreInfo
                         minor: packageVersion.Minor,
                         build: packageVersion.Build,
                         revision: packageVersion.Revision),
-            InternalStoreUri = new Uri(Guid.TryParse(storeId, out var appId)
+            InternalStoreUri = new Uri(isAppId
                 ? $"ms-windows-store://pdp/?AppId={appId}"
                 : $"ms-windows-store://pdp/?ProductId={storeId}"),
             ExternalStoreUri = product.Product.LinkUri,
+            InternalReviewUri = new Uri(isAppId
+                ? $"ms-windows-store://review/?AppId={appId}"
+                : $"ms-windows-store://review/?ProductId={storeId}"),
         };
     }
 }
