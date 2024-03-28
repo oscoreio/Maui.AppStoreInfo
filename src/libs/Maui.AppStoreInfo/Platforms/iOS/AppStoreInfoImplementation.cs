@@ -51,4 +51,12 @@ internal sealed class AppStoreInfoImplementation : IAppStoreInfo
             ExternalStoreUri = new Uri(result.TrackViewUrl),
         };
     }
+    
+    /// <inheritdoc />
+    async Task<bool> IAppStoreInfo.OpenApplicationInStoreAsync(CancellationToken cancellationToken)
+    {
+        CachedInformation ??= await GetInformationAsync(cancellationToken).ConfigureAwait(false);
+
+        return await Launcher.Default.OpenAsync(CachedInformation.ExternalStoreUri).ConfigureAwait(false);
+    }
 }
