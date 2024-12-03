@@ -23,6 +23,7 @@
                     IsSpellCheckEnabled="False"
                     IsTextPredictionEnabled="False"
                     Text="{Binding CurrentVersion, Source={x:Static appStores:AppStoreInfo.Options}, Converter={StaticResource VersionConverter}}"
+                    x:DataType="{x:Type appStores:AppStoreInfoOptions}"
                     WidthRequest="400" />
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="5">
@@ -31,6 +32,7 @@
                     IsSpellCheckEnabled="False"
                     IsTextPredictionEnabled="False"
                     Text="{Binding CountryCode, Source={x:Static appStores:AppStoreInfo.Options}}"
+                    x:DataType="{x:Type appStores:AppStoreInfoOptions}"
                     WidthRequest="400" />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
@@ -39,6 +41,7 @@
                     IsSpellCheckEnabled="False"
                     IsTextPredictionEnabled="False"
                     Text="{Binding PackageName, Source={x:Static appStores:AppStoreInfo.Options}}"
+                    x:DataType="{x:Type appStores:AppStoreInfoOptions}"
                     WidthRequest="400" />
             </HorizontalStackLayout>
 

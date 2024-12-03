@@ -7,10 +7,20 @@
 Allows you to check the information in App stores(for example the latest published version)
 and suggest actions to the user based on this.
 
+### Supported Platforms
+| Platform | Minimum Version Supported             |
+|----------|---------------------------------------|
+| iOS      | 12.2+                                 |
+| macOS    | 15+                                   |
+| Android  | 5.0 (API 21)                          |
+| Windows  | 11 and 10 version 1809+ (build 17763) |
+> [!NOTE]  
+> Since Android doesn't provide an official API, there is no support for this other than opening a store page. It is recommended to use [Android In-App Updates](https://github.com/oscoreio/Maui.Android.InAppUpdates) if you need to check for updates.
+
 # Usage
 - Add NuGet package to your project:
 ```xml
-<PackageReference Include="Oscore.Maui.AppStoreInfo" Version="1.0.0" />
+<PackageReference Include="Oscore.Maui.AppStoreInfo" Version="1.1.0" />
 ```
 - Add the following to your `MauiProgram.cs` `CreateMauiApp` method:
 ```diff
@@ -49,9 +59,6 @@ await DisplayAlert(
     $"Application Size: {information.ApplicationSizeInBytes/1024/1024} MB\n",
     "OK");
 ```
-
-# Notes
-- Since Android doesn't provide an official API, there is no support for this other than opening a store page. It is recommended to use [Android In-App Updates](https://github.com/oscoreio/Maui.Android.InAppUpdates) if you need to check for updates.
 
 # Links
 - https://github.com/edsnider/latestversionplugin/
