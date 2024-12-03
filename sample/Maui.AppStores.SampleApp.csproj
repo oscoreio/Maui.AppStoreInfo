@@ -39,7 +39,6 @@
 
 		<MauiEnableXamlCBindingWithSourceCompilation>true</MauiEnableXamlCBindingWithSourceCompilation>
 
-		<TrimMode>full</TrimMode>
 		<IsAotCompatible>true</IsAotCompatible>
 
 		<PublishAot Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">true</PublishAot>
