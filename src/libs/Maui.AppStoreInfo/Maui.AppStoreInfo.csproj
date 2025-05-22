@@ -11,6 +11,7 @@
     <UseMaui>true</UseMaui>
     <NoWarn>$(NoWarn);CA1031;CA2000</NoWarn>
     <RootNamespace>Maui.AppStores</RootNamespace>
+    <MauiVersion>9.0.70</MauiVersion>
 
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">12.2</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
