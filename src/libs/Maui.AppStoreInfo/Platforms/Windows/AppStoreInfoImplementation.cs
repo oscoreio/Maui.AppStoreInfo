@@ -1,4 +1,6 @@
-﻿using Windows.Services.Store;
+﻿using Windows.ApplicationModel;
+using Windows.Services.Store;
+using AppInfo = Microsoft.Maui.ApplicationModel.AppInfo;
 
 // ReSharper disable once CheckNamespace
 namespace Maui.AppStores;
@@ -41,6 +43,9 @@ public sealed class AppStoreInfoImplementation : IAppStoreInfo
             InternalReviewUri = new Uri(isAppId
                 ? $"ms-windows-store://review/?AppId={appId}"
                 : $"ms-windows-store://review/?ProductId={storeId}"),
+            Type = Package.Current.SignatureKind == PackageSignatureKind.Store
+                ? AppStoreType.MicrosoftStore
+                : AppStoreType.ManualInstallation,
         };
     }
 }

@@ -60,7 +60,8 @@ public partial class MainPage : ContentPage
 				$"Internal Store Uri: {information.InternalStoreUri}\n" +
 				$"Internal Review Uri: {information.InternalReviewUri}\n" +
 				$"Release Notes: {information.ReleaseNotes}\n" +
-				$"Application Size: {information.ApplicationSizeInBytes/1024/1024} MB\n",
+				$"Application Size: {information.ApplicationSizeInBytes/1024/1024} MB\n" +
+				$"App Store Type: {information.Type:G}\n",
 				"OK");
 		}
 		catch (Exception e)

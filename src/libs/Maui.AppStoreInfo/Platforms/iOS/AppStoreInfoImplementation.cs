@@ -1,4 +1,6 @@
-﻿using Maui.AppStores.Internal;
+﻿using Foundation;
+using Maui.AppStores.Internal;
+using StoreKit;
 
 // ReSharper disable once CheckNamespace
 namespace Maui.AppStores;
@@ -49,6 +51,7 @@ internal sealed class AppStoreInfoImplementation : IAppStoreInfo
 			InternalReviewUri = new Uri($"macappstore://itunes.apple.com/app/id{AppStoreInfo.Options.PackageName}?action=write-review"),
 #endif
             ExternalStoreUri = new Uri(result.TrackViewUrl),
+            Type = GetAppStoreType(),
         };
     }
     
@@ -58,5 +61,28 @@ internal sealed class AppStoreInfoImplementation : IAppStoreInfo
         CachedInformation ??= await GetInformationAsync(cancellationToken).ConfigureAwait(false);
 
         return await Launcher.Default.OpenAsync(CachedInformation.ExternalStoreUri).ConfigureAwait(false);
+    }
+    
+    /// <summary>
+    /// Retrieves the receipt URL path to determine if the app was installed via the App Store or TestFlight.
+    /// </summary>
+    /// <returns>The receipt path, or null if unavailable.</returns>
+    private static AppStoreType GetAppStoreType()
+    {
+        // TODO: Modern way — StoreKit 2 - Seems MAUI is not supported in .NET 9 still
+        // https://developer.apple.com/documentation/foundation/bundle/appstorereceipturl
+        
+        // A missing receipt means the app was deployed directly (Xcode, Enterprise, sideload).
+        var receiptUrl = NSBundle.MainBundle.AppStoreReceiptUrl;
+        // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
+        if (receiptUrl is null)
+        {
+            return AppStoreType.ManualInstallation;
+        }
+        
+        // App Store receipts end with “…/receipt”, TestFlight with “…/sandboxReceipt”.
+        return receiptUrl.LastPathComponent?.Equals("sandboxReceipt", StringComparison.OrdinalIgnoreCase) == true
+            ? AppStoreType.AppleTestFlight
+            : AppStoreType.AppleAppStore;
     }
 }

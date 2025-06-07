@@ -44,4 +44,9 @@ public class AppStoreInformation
     /// Application size in bytes in App Store.
     /// </summary>
     public long ApplicationSizeInBytes { get; init; }
+
+    /// <summary>
+    /// Detects the type of app store the app was installed from.
+    /// </summary>
+    public AppStoreType Type { get; init; } = AppStoreType.Unknown;
 }
